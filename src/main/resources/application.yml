@@ -6,6 +6,12 @@ server:
 spring:
   application:
     name: MA-ITEM-SERVICE
+  config:
+    import: "optional:configserver:http://localhost:9440/"
+  cloud:
+    config:
+      name: company
+      profile: data
 
 eureka:
   client:
